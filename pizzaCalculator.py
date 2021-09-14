@@ -5,11 +5,6 @@ toppingAantallen = list()
 pizzaGroepInformatie = list()
 verschillendePizzaAantallen = list()
 enkelPizzaPrijs = 0.0
-aantalChampignon = 0.0
-aantalKaas = 0.0
-aantalPepperoni = 0.0
-aantalAnnanas = 0.0
-aantalWater = 0.0
 toppingPrijsChampignon = 0.05
 toppingPrijsKaas = 0.15
 toppingPrijsPepperoni = 0.50
@@ -19,16 +14,22 @@ totalePizzaPrijs = 0
 
 print("Hallo, en welkom bij mijn pizzawinkel!")
 
-print("--------------------")
-print("      klein|€ 3,00  |")
-print("     medium|€ 6,50  |")
-print("      groot|€ 10,00 |")
-print("extra-large|€ 13,50 |")
-print(" gigantisch|€ 15,00 |")
-print("--------------------")
 while True:
+    
+    aantalChampignon = 0.0
+    aantalKaas = 0.0
+    aantalPepperoni = 0.0
+    aantalAnnanas = 0.0
+    aantalWater = 0.0
     if nietMeerPizzas == True: break
     meerpizzas = False
+    print("--------------------")
+    print("      klein|€ 3,00  |")
+    print("     medium|€ 6,50  |")
+    print("      groot|€ 10,00 |")
+    print("extra-large|€ 13,50 |")
+    print(" gigantisch|€ 15,00 |")
+    print("--------------------")
     print("Welke grootte pizza wilt u hebben?")
     #Vraagt hoe groot de pizzabodem is
     groottePizza = input()
@@ -75,16 +76,16 @@ while True:
         #De champignon
         if gekozenTopping == "champignon":
             gekozenTopping = "champignons"
-            aantalChampignon += float(input("Hoeveel " + gekozenTopping + " wil je hebben op je pizza?"))
+            aantalChampignon += float(input("Hoeveel " + gekozenTopping + " wil je hebben op je pizza? "))
             enkelPizzaPrijs += aantalChampignon * toppingPrijsChampignon + groottePrijs
 
-            meerToppings = input("Wilt u meer toppings hebben? y/n")
+            meerToppings = input("Wilt u meer toppings hebben? y/n ")
             if meerToppings == "y": 
                 continue
 
             else:
                 #Berekend de prijs van de groep pizza's
-                aantalPizzas = float(input("Hoeveel pizza's wil u hiermee hebben?"))
+                aantalPizzas = float(input("Hoeveel pizza's wil u hiermee hebben? "))
                 groepsPizzaPrijs = enkelPizzaPrijs * aantalPizzas
 
                 #Voegt de pizzagroep en al de informatie toe een een lijst
@@ -98,7 +99,7 @@ while True:
                 pizzaGroepInformatie.append(aantalWater)
                 pizzaGroepInformatie.append(groottePrijs)
 
-                meerpizzas = input("Wilt u meer pizza's hebben? y/n")
+                meerpizzas = input("Wilt u meer pizza's hebben? y/n ")
                 if meerpizzas == "y":
                     meerpizzas = True
                     verschillendePizzaAantallen.append(pizzaGroepInformatie)
@@ -113,16 +114,16 @@ while True:
         #De kaas
         elif gekozenTopping == "kaas":
             gekozenTopping = "gram kaas"
-            aantalKaas += float(input("Hoeveel " + gekozenTopping + " wil je hebben op je pizza?"))
+            aantalKaas += float(input("Hoeveel " + gekozenTopping + " wil je hebben op je pizza? "))
             enkelPizzaPrijs += aantalChampignon * toppingPrijsKaas + groottePrijs
 
-            meerToppings = input("Wilt u meer toppings hebben? y/n")
+            meerToppings = input("Wilt u meer toppings hebben? y/n ")
             if meerToppings == "y": 
                 continue
 
             else:
                 #Berekend de prijs van de groep pizza's
-                aantalPizzas = float(input("Hoeveel pizza's wil u hiermee hebben?"))
+                aantalPizzas = float(input("Hoeveel pizza's wil u hiermee hebben? "))
                 groepsPizzaPrijs = enkelPizzaPrijs * aantalPizzas
 
                 #Voegt de pizzagroep en al de informatie toe een een lijst
@@ -136,7 +137,7 @@ while True:
                 pizzaGroepInformatie.append(aantalWater)
                 pizzaGroepInformatie.append(groottePrijs)
 
-                meerpizzas = input("Wilt u meer pizza's hebben? y/n")
+                meerpizzas = input("Wilt u meer pizza's hebben? y/n ")
                 if meerpizzas == "y":
                     meerpizzas = True
                     verschillendePizzaAantallen.append(pizzaGroepInformatie)
@@ -150,16 +151,16 @@ while True:
         #De pepperoni
         elif gekozenTopping == "pepperoni":
             gekozenTopping = "pepperoni"
-            aantalPepperoni += float(input("Hoeveel " + gekozenTopping + " wil je hebben op je pizza?"))
+            aantalPepperoni += float(input("Hoeveel " + gekozenTopping + " wil je hebben op je pizza? "))
             enkelPizzaPrijs += aantalChampignon * toppingPrijsPepperoni + groottePrijs
 
-            meerToppings = input("Wilt u meer toppings hebben? y/n")
+            meerToppings = input("Wilt u meer toppings hebben? y/n ")
             if meerToppings == "y": 
                 continue
 
             else:
                 #Berekend de prijs van de groep pizza's
-                aantalPizzas = float(input("Hoeveel pizza's wil u hiermee hebben?"))
+                aantalPizzas = float(input("Hoeveel pizza's wil u hiermee hebben? "))
                 groepsPizzaPrijs = enkelPizzaPrijs * aantalPizzas
 
                 #Voegt de pizzagroep en al de informatie toe een een lijst
@@ -173,7 +174,7 @@ while True:
                 pizzaGroepInformatie.append(aantalWater)
                 pizzaGroepInformatie.append(groottePrijs)              
 
-                meerpizzas = input("Wilt u meer pizza's hebben? y/n")
+                meerpizzas = input("Wilt u meer pizza's hebben? y/n ")
                 if meerpizzas == "y":
                     meerpizzas = True
                     verschillendePizzaAantallen.append(pizzaGroepInformatie)
@@ -187,16 +188,16 @@ while True:
         #De annanas
         elif gekozenTopping == "annanas":
             gekozenTopping = "annanas"
-            aantalAnnanas += float(input("Hoeveel " + gekozenTopping + " wil je hebben op je pizza?"))
+            aantalAnnanas += float(input("Hoeveel " + gekozenTopping + " wil je hebben op je pizza? "))
             enkelPizzaPrijs += aantalChampignon * toppingPrijsAnnanas + groottePrijs
 
-            meerToppings = input("Wilt u meer toppings hebben? y/n")
+            meerToppings = input("Wilt u meer toppings hebben? y/n ")
             if meerToppings == "y": 
                 continue
 
             else:
                 #Berekend de prijs van de groep pizza's
-                aantalPizzas = float(input("Hoeveel pizza's wil u hiermee hebben?"))
+                aantalPizzas = float(input("Hoeveel pizza's wil u hiermee hebben? "))
                 groepsPizzaPrijs = enkelPizzaPrijs * aantalPizzas
 
                 #Voegt de pizzagroep en al de informatie toe een een lijst
@@ -210,7 +211,7 @@ while True:
                 pizzaGroepInformatie.append(aantalWater)
                 pizzaGroepInformatie.append(groottePrijs)
 
-                meerpizzas = input("Wilt u meer pizza's hebben? y/n")
+                meerpizzas = input("Wilt u meer pizza's hebben? y/n ")
                 if meerpizzas == "y":
                     meerpizzas = True
                     verschillendePizzaAantallen.append(pizzaGroepInformatie)
@@ -224,16 +225,16 @@ while True:
         #Het water
         elif gekozenTopping == "water":
             gekozenTopping = "gram water"
-            aantalWater += float(input("Hoeveel " + gekozenTopping + " wil je hebben op je pizza?"))
+            aantalWater += float(input("Hoeveel " + gekozenTopping + " wil je hebben op je pizza? "))
             enkelPizzaPrijs += aantalChampignon * toppingPrijsWater + groottePrijs
 
-            meerToppings = input("Wilt u meer toppings hebben? y/n")
+            meerToppings = input("Wilt u meer toppings hebben? y/n ")
             if meerToppings == "y": 
                 continue
 
             else:
                 #Berekend de prijs van de groep pizza's               
-                aantalPizzas = float(input("Hoeveel pizza's wil u hiermee hebben?"))
+                aantalPizzas = float(input("Hoeveel pizza's wil u hiermee hebben? "))
                 groepsPizzaPrijs = enkelPizzaPrijs * aantalPizzas
 
                 #Voegt de pizzagroep en al de informatie toe een een lijst
@@ -276,7 +277,7 @@ for x in verschillendePizzaAantallen:
     print("|" + str(x[4]) + " stukken pepperoni,")
     print("|" + str(x[5]) + " stukken annanas,")
     print("|" + str(x[6]) + " gram water")
-    print("| ten waarde van €" + str(x[1] + x[2] * toppingPrijsChampignon + x[3] * toppingPrijsKaas + x[4] * toppingPrijsPepperoni + x[5] * toppingPrijsAnnanas + x[6] * toppingPrijsWater + x[6] * toppingPrijsWater))
+    print("| ten waarde van €" + str(x[1] + x[2] * toppingPrijsChampignon + x[3] * toppingPrijsKaas + x[4] * toppingPrijsPepperoni + x[5] * toppingPrijsAnnanas + x[6] * toppingPrijsWater))
     print("----------------------------")
 print("Dit allemaal bij elkaar kost in totaal €" + str(totalePizzaPrijs))
 print("Bedankt voor uw bestelling!")
